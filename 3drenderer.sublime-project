@@ -1,0 +1,30 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	], 
+	"build_systems":
+	[
+		{
+			"name": "make - build",
+			"shell_cmd": "mingw32-make", 
+			"selector": "source.c", 
+			"working_dir": "$project_path", 
+			"file_regex":"^(|..[^:]*):([0-9]*):?([0-9]*)?:? (.*)$"
+		}, 
+		{
+			"name": "make - run",
+			"shell_cmd": "mingw32-make run", 
+			"selector": "source.c", 
+			"working_dir": "$project_path"
+		}, 
+		{
+			"name": "make - clean",
+			"shell_cmd": "mingw32-make clean", 
+			"selector": "source.c", 
+			"working_dir": "$project_path"
+		}
+	]
+}

@@ -1,0 +1,921 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"WINDOW",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"WIND",
+				"WINDOW_WIDTH"
+			],
+			[
+				"this_",
+				"this_height"
+			],
+			[
+				"coo",
+				"coord_x"
+			],
+			[
+				"pr",
+				"printf"
+			],
+			[
+				"WI",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"colr",
+				"color_buffer_texture"
+			],
+			[
+				"wind",
+				"WINDOW_WIDTH"
+			],
+			[
+				"color",
+				"color_buffer"
+			],
+			[
+				"text",
+				"color_buffer_texture"
+			],
+			[
+				"render",
+				"render_color_buffer"
+			],
+			[
+				"pri",
+				"fprintf"
+			],
+			[
+				"WINDI",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"psu",
+				"push"
+			],
+			[
+				"pus",
+				"push_value"
+			],
+			[
+				"entr",
+				"entry_content"
+			],
+			[
+				"connec",
+				"connection"
+			],
+			[
+				"scre",
+				"screenrows"
+			],
+			[
+				"cur",
+				"cursor_y"
+			],
+			[
+				"welco",
+				"welcomelen"
+			],
+			[
+				"scree",
+				"screenrows"
+			],
+			[
+				"NK_WINDOW",
+				"NK_WINDOW_SCALABLE"
+			],
+			[
+				"NK_",
+				"NK_WINDOW_MINIMIZABLE"
+			]
+		]
+	},
+	"build_system": "make - build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Compile & Run",
+					""
+				],
+				[
+					"kilo-compile",
+					""
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					""
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"JSON"
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"Property List"
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"YAML (Block Style)"
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"YAML (Default Style)"
+				]
+			],
+			[
+				"kilo-compile",
+				""
+			]
+		],
+		[
+			[
+				[
+					"List",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/mingw-make.sublime-build",
+					""
+				]
+			],
+			[
+				"List",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				]
+			],
+			[
+				"Packages/User/c-build-script.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				]
+			],
+			[
+				"Packages/User/c-build-script.sublime-build",
+				"Compile"
+			]
+		],
+		[
+			[
+				[
+					"build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/mingw-make.sublime-build",
+					""
+				]
+			],
+			[
+				"build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"build",
+					""
+				],
+				[
+					"clean",
+					""
+				],
+				[
+					"run",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/mingw-make.sublime-build",
+					""
+				]
+			],
+			[
+				"run",
+				""
+			]
+		],
+		[
+			[
+				[
+					"compile kilo",
+					""
+				],
+				[
+					"compile kilo and run",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				]
+			],
+			[
+				"compile kilo",
+				""
+			]
+		],
+		[
+			[
+				[
+					"compile kilo",
+					""
+				],
+				[
+					"compile kilo and run",
+					""
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					""
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"JSON"
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"Property List"
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"YAML (Block Style)"
+				],
+				[
+					"Packages/PackageDev/Package/Convert to ....sublime-build",
+					"YAML (Default Style)"
+				]
+			],
+			[
+				"compile kilo",
+				""
+			]
+		],
+		[
+			[
+				[
+					"compile kilo",
+					""
+				],
+				[
+					"compile kilo and run",
+					""
+				],
+				[
+					"compile ubuntu kilo",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				]
+			],
+			[
+				"compile kilo",
+				""
+			]
+		],
+		[
+			[
+				[
+					"make - build",
+					""
+				],
+				[
+					"make - clean",
+					""
+				],
+				[
+					"make - run",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Compile & Run"
+				],
+				[
+					"Packages/User/c-build-script.sublime-build",
+					"Release"
+				],
+				[
+					"Packages/User/mingw-make.sublime-build",
+					""
+				]
+			],
+			[
+				"make - build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"PackageDev: New Color Scheme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"select ",
+				"UI: Select Theme"
+			],
+			[
+				"select color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"select theme",
+				"UI: Select Theme"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"edit current",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"edti current",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"edit cur",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"edit color",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings"
+			],
+			[
+				"edir color",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"eid",
+				"PackageDev: Edit Current Theme"
+			],
+			[
+				"edit",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"edit clor",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings"
+			],
+			[
+				"SELECT C",
+				"UI: Select Color Scheme"
+			],
+			[
+				"edit c",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"select color sc",
+				"UI: Select Color Scheme"
+			],
+			[
+				"new color",
+				"PackageDev: New Color Scheme"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"view.run_command(\"annotated_comments\")"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/learning/3d-graphics/3drenderer/[dir",
+		"/E/learning/3d-graphics/3drenderer/[path",
+		"/E/learning/3d-graphics/3drenderer/Makefile",
+		"/E/learning/3d-graphics/3d-graphics-in-C/main.c",
+		"/E/learning/django/feedback/profiles/forms.py",
+		"/E/learning/c-programming/data-structures-udemy/pop-push.c",
+		"/C/Users/emanuel/Documents/hello.odin",
+		"/E/Downloads/Nat2020us/Nat2020PublicUS.c20210506.r20210812.txt",
+		"/E/learning/django/book_store/manage.py",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/Tomorrow_Night.tmTheme",
+		"/E/learning/progdiary/database.py",
+		"/E/learning/progdiary/app.py",
+		"/E/Downloads/en.stsw-link009_v2.0.2/readme.txt",
+		"/E/dev/stm32f4-bareMetal-workspace/0_led_toggle_addr/.gitignore",
+		"/E/dev/stm32f4-bareMetal-workspace/.gitignore",
+		"/E/dev/learn-c-the-hardway/build.bat",
+		"/E/dev/learn-c-the-hardway/ex1.c",
+		"/E/projects/kilo/code/kilo.c",
+		"/E/projects/kilo/.gitignore",
+		"/E/projects/kilo/kilo.sublime-project",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/gruvbox (Dark) (Medium).sublime-color-scheme",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/c-build-script.sublime-build",
+		"/E/projects/RCode/build/RCode.ilk",
+		"/E/projects/RCode/build.bat",
+		"/E/projects/RCode/deps/include/nuklear.h",
+		"/E/projects/RCode/deps/include/nuklear_glfw_gl3.h",
+		"/E/Nuklear/example/;.",
+		"/E/projects/RCode/src/nuklear.h",
+		"/E/projects/quickRunner/src/nuklear_d3d11.h",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/custom-gruvbox-dark.sublime-theme",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/custom-gruvbox-dark.json",
+		"/E/Nuklear/demo/overview.c",
+		"/C/Users/emanuel/Dropbox/Documents/config-files/sublime/user/User/Theme - Monokai Pro.sublime-settings",
+		"/C/Users/emanuel/Dropbox/Documents/config-files/sublime/Default (Linux).sublime-keymap",
+		"/C/Users/emanuel/Documents/test.c",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/test.py",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"10",
+			"setup",
+			"cur",
+			"pd",
+			"editor_ope",
+			"!=",
+			"FILE",
+			"linelen",
+			"editor_open",
+			"\t\t\t\tcase 'D': {\n\t\t\t\t\treturn ARROW_LEFT;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n",
+			"editor_read_key",
+			"editor_move_cursor",
+			"editor_read_key",
+			"editor_move_cursor",
+			"move_cur",
+			"editor_read_key",
+			"move",
+			"int *row",
+			"read_key",
+			"position",
+			"move_cursor",
+			"init",
+			"cur",
+			"STDOUT_FILENO",
+			"write",
+			"Terminal",
+			"orig_termios",
+			"\");\n",
+			"yellow"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"E.orig_termios"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 291.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mai",
+				"src\\main.c"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"main",
+				"src\\main.c"
+			],
+			[
+				"",
+				"code\\kilo.c"
+			],
+			[
+				"kil",
+				"code\\kilo.c"
+			],
+			[
+				"k",
+				"code\\kilo.c"
+			],
+			[
+				"kilo",
+				"code\\kilo.c"
+			],
+			[
+				"bui",
+				"build.bat"
+			],
+			[
+				"kilo.c",
+				"code\\kilo.c"
+			],
+			[
+				"bi",
+				"build.sh"
+			],
+			[
+				"ki",
+				"kilo.c"
+			],
+			[
+				"Rcode",
+				"src\\RCode.c"
+			],
+			[
+				"nuk",
+				"cl_deps\\include\\nuklear.h"
+			],
+			[
+				"Rco",
+				"src\\RCode.c"
+			],
+			[
+				"build",
+				"build.bat"
+			],
+			[
+				"nu",
+				"cl_deps\\include\\nuklear.h"
+			],
+			[
+				"ma",
+				"main.c"
+			],
+			[
+				"RC",
+				"src\\RCode.c"
+			],
+			[
+				"src/",
+				"src\\RCode.c"
+			],
+			[
+				"b",
+				"build.bat"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 183.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
