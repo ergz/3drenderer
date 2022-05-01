@@ -715,11 +715,11 @@
 	],
 	"find":
 	{
-		"height": 31.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
-		"height": 104.0,
+		"height": 113.0,
 		"where_history":
 		[
 			""
@@ -730,6 +730,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"*",
+			"uint32_t",
+			"900",
+			"WINDOW_WIDTH",
 			"10",
 			"setup",
 			"cur",
@@ -805,6 +809,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"mka",
+				"Makefile"
+			],
 			[
 				"mai",
 				"src\\main.c"
