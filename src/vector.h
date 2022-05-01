@@ -20,4 +20,8 @@ typedef struct {
 
 // TODO: add function to manipulate vectors
 
+vec3_t vec3_rotate_x(vec3_t, float);
+vec3_t vec3_rotate_y(vec3_t, float);
+vec3_t vec3_rotate_z(vec3_t, float);
+
 #endif
