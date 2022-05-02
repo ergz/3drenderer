@@ -1,7 +1,9 @@
 CC=gcc 
+MINGW_INC_PATH=C:/mingw_dev_libs/include
+MINGW_LIB_PATH=C:/mingw_dev_libs/lib
 
 default:
-	$(CC) -Wall -std=c99 src/*.c -IC:/migw_dev_libs/include -LC:/migw_dev_libs/lib -lmingw32 -lSDL2main -lSDL2 -lm -o build/renderer.exe
+	$(CC) -Wall -std=c99 src/*.c -I$(MINGW_INC_PATH) -L$(MINGW_LIB_PATH) -lmingw32 -lSDL2main -lSDL2 -lm -o build/renderer.exe
 
 clean:
 	cd build
