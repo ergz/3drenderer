@@ -31,7 +31,8 @@ void setup(void)
 
 	// start loading array of vectors
 
-	load_cube_mesh_data();
+	// load_cube_mesh_data();
+	load_obj_file_data("assets/f22.obj");
 
 };
 
@@ -148,7 +149,7 @@ int main(int argc, char *argv[])
 
 
 
-	while(is_running) {
+	while (is_running) {
 		process_input();
 		update();
 		render();
