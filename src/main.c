@@ -18,7 +18,7 @@ vec3_t cube_rotation = {0, 0, 0};
 float fov_factor = 750;
 bool is_running = false;
 
-void setup(void)
+void setup(char *filename)
 {
 	
 	color_buffer = (uint32_t*)malloc(sizeof(uint32_t) * WINDOW_WIDTH * WINDOW_HEIGHT);
@@ -32,7 +32,7 @@ void setup(void)
 	// start loading array of vectors
 
 	// load_cube_mesh_data();
-	load_obj_file_data("assets/f22.obj");
+	load_obj_file_data(filename);
 
 };
 
@@ -143,9 +143,18 @@ void free_resources(void)
 
 int main(int argc, char *argv[])
 {
+	char *filename;
+	if (argc == 1) {
+		printf("using default file\n");
+		filename = "assets/f22.obj";
+	} else {
+
+		filename = argv[1];
+	}
+
 	is_running = initialize_window();
 
-	setup();
+	setup(filename);
 
 
 
