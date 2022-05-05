@@ -34,6 +34,17 @@ void setup(char *filename)
 	// load_cube_mesh_data();
 	load_obj_file_data(filename);
 
+	vec2_t x = {1, 2};
+	vec2_t y = {4, 2};
+	vec3_t xx = {1, 2, 5};
+	vec3_t yy = {4, 2, 5};
+
+	vec2_t a = vec2_add(x, y);
+	vec3_t b = vec3_add(xx, yy);
+	printf("the len of the vector is: %f\n", vec2_len(x));
+	printf("the result of the vector additions: (%f, %f)\n", a.x, a.y);	
+	printf("the len of the vector is: %f\n", vec3_len(xx));
+	printf("the result of the vector additions: (%f, %f, %f)\n", b.x, b.y, b.z);
 };
 
 void process_input()
@@ -158,11 +169,11 @@ int main(int argc, char *argv[])
 
 
 
-	while (is_running) {
-		process_input();
-		update();
-		render();
-	}
+	// while (is_running) {
+	// 	process_input();
+	// 	update();
+	// 	render();
+	// }
 
 	destroy_window();
 	free_resources();
