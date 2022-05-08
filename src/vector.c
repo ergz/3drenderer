@@ -90,7 +90,7 @@ vec3_t vec3_div(vec3_t v, float a)
 	return res;
 }
 
-vec3_t vec3_cross_prod(vec2_t a, vec2_t a) 
+vec3_t vec3_cross_prod(vec3_t a, vec3_t b) 
 {
 	vec3_t res = {
 		.x = a.y * b.z - a.z * b.y, 
@@ -101,3 +101,4 @@ vec3_t vec3_cross_prod(vec2_t a, vec2_t a)
 	return res;
 
 }
+

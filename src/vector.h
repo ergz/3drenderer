@@ -39,6 +39,6 @@ vec3_t vec3_mult(vec3_t, float);
 vec2_t vec2_div(vec2_t, float);
 vec3_t vec3_div(vec3_t, float);
 
-vec3_t vec3_cross_prod(vec2_t, vec2_t);
+vec3_t vec3_cross_prod(vec3_t, vec3_t);
 
 #endif
