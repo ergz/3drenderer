@@ -122,7 +122,11 @@ void update(void)
 		vec3_t camera_ray = vec3_sub(camera_position, vector_a);
 
 		// compute the dot product between the normal and camera_ray
-		// float vec2_do
+		float dot_normal_camera = vec3_dot(camera_ray, normal);
+
+		if (dot_normal_camera < 0) {
+			continue;
+		}
 
 		// project to 2d
 		for (int j = 0; j < 3; j++) {

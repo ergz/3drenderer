@@ -40,5 +40,5 @@ vec2_t vec2_div(vec2_t, float);
 vec3_t vec3_div(vec3_t, float);
 
 vec3_t vec3_cross_prod(vec3_t, vec3_t);
-
+float vec3_dot(vec3_t a, vec3_t b);
 #endif
