@@ -12,7 +12,7 @@
 triangle_t *triangles_to_render = NULL;
 
 int previous_frame_time = 0;
-vec3_t camera_position = {0, 0, -5};
+vec3_t camera_position = {0, 0, 0};
 vec3_t cube_rotation = {0, 0, 0};
 
 float fov_factor = 750;
@@ -34,17 +34,7 @@ void setup(char *filename)
 	// load_cube_mesh_data();
 	load_obj_file_data(filename);
 
-	vec2_t x = {1, 2};
-	vec2_t y = {4, 2};
-	vec3_t xx = {1, 2, 5};
-	vec3_t yy = {4, 2, 5};
 
-	vec2_t a = vec2_add(x, y);
-	vec3_t b = vec3_add(xx, yy);
-	printf("the len of the vector is: %f\n", vec2_len(x));
-	printf("the result of the vector additions: (%f, %f)\n", a.x, a.y);	
-	printf("the len of the vector is: %f\n", vec3_len(xx));
-	printf("the result of the vector additions: (%f, %f, %f)\n", b.x, b.y, b.z);
 };
 
 void process_input()
@@ -93,6 +83,7 @@ void update(void)
 
 	int num_faces = array_length(mesh.faces);
 
+	// iterate through all of the faces
 	for (int i = 0; i < num_faces; i++) {
 		face_t mesh_face = mesh.faces[i];
 		vec3_t mesh_face_vertices[3];
@@ -102,15 +93,41 @@ void update(void)
 
 		triangle_t projected_triangle;
 
+		vec3_t transformed_vertices[3]; // array of length three of vec3's
+
+		// for each of the vertices in the triangle project
 		for (int j = 0; j < 3; j++) {
 			vec3_t transformed_vertex = mesh_face_vertices[j];
 			transformed_vertex = vec3_rotate_x(transformed_vertex, cube_rotation.x);
 			transformed_vertex = vec3_rotate_y(transformed_vertex, cube_rotation.y);
 			// transformed_vertex = vec3_rotate_z(transformed_vertex, cube_rotation.z);
 
-			transformed_vertex.z -= camera_position.z;
+			transformed_vertex.z += 5; // TODO remove this hard-coded value
+			transformed_vertices[j] = transformed_vertex; 
+		}
 
-			vec2_t projected_point = project(transformed_vertex);
+		// check back-face culling
+		vec3_t vector_a = transformed_vertices[0];
+		vec3_t vector_b = transformed_vertices[1];
+		vec3_t vector_c = transformed_vertices[2];
+
+		// find B-A and C-A
+		vec3_t vector_ab = vec3_sub(vector_b, vector_a);
+		vec3_t vector_ac = vec3_sub(vector_c, vector_a);
+
+		// get normal vector
+		vec3_t normal = vec3_cross_prod(vector_ab, vector_ac);
+
+		// get vector from camera to a
+		vec3_t camera_ray = vec3_sub(camera_position, vector_a);
+
+		// compute the dot product between the normal and camera_ray
+		// float vec2_do
+
+		// project to 2d
+		for (int j = 0; j < 3; j++) {
+
+			vec2_t projected_point = project(transformed_vertices[j]);
 			projected_point.x += (WINDOW_WIDTH / 2);
 			projected_point.y += (WINDOW_HEIGHT / 2);
 
@@ -169,11 +186,11 @@ int main(int argc, char *argv[])
 
 
 
-	// while (is_running) {
-	// 	process_input();
-	// 	update();
-	// 	render();
-	// }
+	while (is_running) {
+		process_input();
+		update();
+		render();
+	}
 
 	destroy_window();
 	free_resources();
