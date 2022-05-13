@@ -100,7 +100,7 @@ void update(void)
 			vec3_t transformed_vertex = mesh_face_vertices[j];
 			transformed_vertex = vec3_rotate_x(transformed_vertex, cube_rotation.x);
 			transformed_vertex = vec3_rotate_y(transformed_vertex, cube_rotation.y);
-			// transformed_vertex = vec3_rotate_z(transformed_vertex, cube_rotation.z);
+			transformed_vertex = vec3_rotate_z(transformed_vertex, cube_rotation.z);
 
 			transformed_vertex.z += 5; // TODO remove this hard-coded value
 			transformed_vertices[j] = transformed_vertex; 
@@ -115,8 +115,12 @@ void update(void)
 		vec3_t vector_ab = vec3_sub(vector_b, vector_a);
 		vec3_t vector_ac = vec3_sub(vector_c, vector_a);
 
+		vec3_normalize(&vector_ab);
+		vec3_normalize(&vector_ac);
+
 		// get normal vector
 		vec3_t normal = vec3_cross_prod(vector_ab, vector_ac);
+		vec3_normalize(&normal);
 
 		// get vector from camera to a
 		vec3_t camera_ray = vec3_sub(camera_position, vector_a);
@@ -124,21 +128,20 @@ void update(void)
 		// compute the dot product between the normal and camera_ray
 		float dot_normal_camera = vec3_dot(camera_ray, normal);
 
-		if (dot_normal_camera < 0) {
-			continue;
+		if (dot_normal_camera >= 0) {
+
+			// project to 2d
+			for (int j = 0; j < 3; j++) {
+
+				vec2_t projected_point = project(transformed_vertices[j]);
+				projected_point.x += (WINDOW_WIDTH / 2);
+				projected_point.y += (WINDOW_HEIGHT / 2);
+
+				projected_triangle.point[j] = projected_point;
+			}
+
+			array_push(triangles_to_render, projected_triangle);
 		}
-
-		// project to 2d
-		for (int j = 0; j < 3; j++) {
-
-			vec2_t projected_point = project(transformed_vertices[j]);
-			projected_point.x += (WINDOW_WIDTH / 2);
-			projected_point.y += (WINDOW_HEIGHT / 2);
-
-			projected_triangle.point[j] = projected_point;
-		}
-
-		array_push(triangles_to_render, projected_triangle);
 	}
 };
 
@@ -178,7 +181,7 @@ int main(int argc, char *argv[])
 	char *filename;
 	if (argc == 1) {
 		printf("using default file\n");
-		filename = "assets/f22.obj";
+		filename = "assets/cube.obj";
 	} else {
 
 		filename = argv[1];

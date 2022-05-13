@@ -105,3 +105,12 @@ vec3_t vec3_cross_prod(vec3_t a, vec3_t b)
 float vec3_dot(vec3_t a, vec3_t b) {
     return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
 }
+
+void vec3_normalize(vec3_t *a)
+{
+	float a_len = sqrt((a->x * a->x) + (a->y * a->y) + (a->z * a->z));
+	a->x /= a_len;
+	a->y /= a_len;
+	a->z /= a_len;
+}
+
