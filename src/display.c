@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "SDL2/SDL.h"
+#include "SDL.h"
 #include <math.h>
 
 SDL_Window *window = NULL;
@@ -22,8 +22,8 @@ bool initialize_window(void)
 
 	SDL_DisplayMode display_mode;
 	SDL_GetCurrentDisplayMode(0, &display_mode);
-	WINDOW_WIDTH = display_mode.w;
-	WINDOW_HEIGHT = display_mode.h;
+	WINDOW_WIDTH = display_mode.w * .75;
+	WINDOW_HEIGHT = display_mode.h * .75;
 
 	/* create an sdl window */
 	window = SDL_CreateWindow(
@@ -31,7 +31,7 @@ bool initialize_window(void)
 		SDL_WINDOWPOS_CENTERED, 
 		SDL_WINDOWPOS_CENTERED, 
 		WINDOW_WIDTH, WINDOW_HEIGHT, 
-		SDL_WINDOW_BORDERLESS);
+		SDL_WINDOW_RESIZABLE);
 
 	if (!window) {
 		fprintf(stderr, "there was an error trying to create window");
@@ -46,7 +46,8 @@ bool initialize_window(void)
 		return false;
 	}
 
-	SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+	// SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+	SDL_SetWindowBordered(window, SDL_TRUE);
 
 	return true;
 }

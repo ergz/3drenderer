@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "SDL2/SDL.h"
+#include "SDL.h"
 #include "mesh.h"
 #include "display.h"
 #include "vector.h"
@@ -29,13 +29,14 @@ void setup(char *filename)
 		SDL_TEXTUREACCESS_STREAMING, 
 		WINDOW_WIDTH, WINDOW_HEIGHT);
 
-	// start loading array of vectors
 
+	// start loading array of vectors
 	// load_cube_mesh_data();
 	load_obj_file_data(filename);
 
 
 };
+
 
 void process_input()
 {

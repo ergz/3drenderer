@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "SDL2/SDL.h"
+#include "SDL.h"
 
 extern uint32_t *color_buffer;
 extern SDL_Window *window;
