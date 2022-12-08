@@ -9,7 +9,7 @@
 #include "triangle.h"
 #include "array.h"
 
-triangle_t *triangles_to_render = NULL;
+triangle_t *triangles_to_render = NULL; // struct of 3 vect2's (x, y)
 
 int previous_frame_time = 0;
 vec3_t camera_position = {0, 0, 0};
@@ -36,7 +36,6 @@ void setup(char *filename)
 
 
 };
-
 
 void process_input()
 {
@@ -179,6 +178,7 @@ void free_resources(void)
 
 int main(int argc, char *argv[])
 {
+	
 	char *filename;
 	if (argc == 1) {
 		printf("using default file\n");
