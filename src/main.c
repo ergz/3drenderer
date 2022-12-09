@@ -150,19 +150,21 @@ void render()
 	SDL_SetRenderDrawColor(renderer, 255,0,0,255);
 	SDL_RenderClear(renderer);
 
-	// int num_triangles = array_length(triangles_to_render);
+	int num_triangles = array_length(triangles_to_render);
 
-	// for (int i = 0; i < num_triangles; i++) {
-	// 	triangle_t triangle = triangles_to_render[i];
+	for (int i = 0; i < num_triangles; i++) {
+		triangle_t triangle = triangles_to_render[i];
 
-	// 	draw_triangle(
-	// 		triangle.point[0].x, triangle.point[0].y, 
-	// 		triangle.point[1].x, triangle.point[1].y,
-	// 		triangle.point[2].x, triangle.point[2].y, 0xFF00FF00);
-	// }
-
-	// draw_triangle(300, 100, 50, 400, 500, 700, 0xFF00FF00);
-	draw_filled_triangle(300, 100, 50, 400, 500, 700, 0xFF00FF00);
+		draw_filled_triangle(
+			triangle.point[0].x, triangle.point[0].y, 
+			triangle.point[1].x, triangle.point[1].y,
+			triangle.point[2].x, triangle.point[2].y, 0xFFFFFFFF);
+		draw_triangle(
+			triangle.point[0].x, triangle.point[0].y, 
+			triangle.point[1].x, triangle.point[1].y,
+			triangle.point[2].x, triangle.point[2].y, 0xFF000000);
+	
+	}
 
 	array_free(triangles_to_render);
 	render_color_buffer();
