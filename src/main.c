@@ -17,6 +17,8 @@ vec3_t cube_rotation = {0, 0, 0};
 
 float fov_factor = 750;
 bool is_running = false;
+bool draw_wireframe = false;
+bool draw_filled = true;
 
 void setup(char *filename)
 {
@@ -49,9 +51,24 @@ void process_input()
 		case SDL_KEYDOWN: {
 			if (event.key.keysym.sym == SDLK_ESCAPE) {
 				is_running = false;
-			
+			} else if (event.key.keysym.sym == SDLK_1) {
+				if (draw_wireframe) {
+					draw_wireframe = false;
+				} else {
+					draw_wireframe = true;
+				}
+			} else if (event.key.keysym.sym == SDLK_2) {
+				draw_filled = false;
+				draw_wireframe = true;
+			} else if (event.key.keysym.sym == SDLK_3) {
+				draw_filled = true;
+			} else if (event.key.keysym.sym == SDLK_4) {
+				
+			} else if (event.key.keysym.sym == SDLK_5) {
+				
+			}
 		} break;
-	}}
+	}
 };
 
 vec2_t project(vec3_t point)
@@ -155,14 +172,21 @@ void render()
 	for (int i = 0; i < num_triangles; i++) {
 		triangle_t triangle = triangles_to_render[i];
 
-		draw_filled_triangle(
-			triangle.point[0].x, triangle.point[0].y, 
-			triangle.point[1].x, triangle.point[1].y,
-			triangle.point[2].x, triangle.point[2].y, 0xFFFFFFFF);
-		draw_triangle(
-			triangle.point[0].x, triangle.point[0].y, 
-			triangle.point[1].x, triangle.point[1].y,
-			triangle.point[2].x, triangle.point[2].y, 0xFF000000);
+		if (draw_filled) {
+			draw_filled_triangle(
+				triangle.point[0].x, triangle.point[0].y, 
+				triangle.point[1].x, triangle.point[1].y,
+				triangle.point[2].x, triangle.point[2].y, 0xFFFFFFFF
+			);
+		}
+
+		if (draw_wireframe) {
+			draw_triangle(
+				triangle.point[0].x, triangle.point[0].y, 
+				triangle.point[1].x, triangle.point[1].y,
+				triangle.point[2].x, triangle.point[2].y, 0xFF00FF00
+			);
+		}
 	
 	}
 
