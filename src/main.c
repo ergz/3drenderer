@@ -17,8 +17,26 @@ vec3_t cube_rotation = {0, 0, 0};
 
 float fov_factor = 750;
 bool is_running = false;
-bool draw_wireframe = false;
-bool draw_filled = true;
+
+typedef unsigned char triangle_render_ops;
+// 8 bits to represent the render options of the triangle
+// 11111 1(vertices) 1(wireframe) 1(fill)
+triangle_render_ops triangle_ops = ~0u;
+
+void triangle_option_toggle_fill(triangle_render_ops *tr) 
+{
+	*tr ^= 1UL << 0;
+} 
+
+void triangle_option_toggle_wireframe(triangle_render_ops *tr) 
+{
+	*tr ^= 1UL << 1;
+} 
+
+void triangle_option_toggle_vertices(triangle_render_ops *tr) 
+{
+	*tr ^= 1UL << 2;
+} 
 
 void setup(char *filename)
 {
@@ -52,20 +70,20 @@ void process_input()
 			if (event.key.keysym.sym == SDLK_ESCAPE) {
 				is_running = false;
 			} else if (event.key.keysym.sym == SDLK_1) {
-				if (draw_wireframe) {
-					draw_wireframe = false;
-				} else {
-					draw_wireframe = true;
-				}
+				// Pressing “1” displays the wireframe and a small red dot for each triangle vertex
+				triangle_option_toggle_wireframe(&triangle_ops);
 			} else if (event.key.keysym.sym == SDLK_2) {
-				draw_filled = false;
-				draw_wireframe = true;
+				// Pressing “2” displays only the wireframe lines
+				triangle_option_toggle_fill(&triangle_ops);
 			} else if (event.key.keysym.sym == SDLK_3) {
-				draw_filled = true;
+				triangle_option_toggle_vertices(&triangle_ops);
+				// Pressing “3” displays filled triangles with a solid color
 			} else if (event.key.keysym.sym == SDLK_4) {
-				
-			} else if (event.key.keysym.sym == SDLK_5) {
-				
+				// Pressing “4” displays both filled triangles and wireframe lines
+			} else if (event.key.keysym.sym == SDLK_c) {
+				// Pressing “c” we should enable back-face culling
+			} else if (event.key.keysym.sym == SDLK_d) {
+				// Pressing “d” we should disable the back-face culling
 			}
 		} break;
 	}
@@ -172,7 +190,7 @@ void render()
 	for (int i = 0; i < num_triangles; i++) {
 		triangle_t triangle = triangles_to_render[i];
 
-		if (draw_filled) {
+		if (triangle_ops & 1) {
 			draw_filled_triangle(
 				triangle.point[0].x, triangle.point[0].y, 
 				triangle.point[1].x, triangle.point[1].y,
@@ -180,11 +198,19 @@ void render()
 			);
 		}
 
-		if (draw_wireframe) {
+		if (triangle_ops & 1 << 1) {
 			draw_triangle(
 				triangle.point[0].x, triangle.point[0].y, 
 				triangle.point[1].x, triangle.point[1].y,
 				triangle.point[2].x, triangle.point[2].y, 0xFF00FF00
+			);
+		}
+
+		if (triangle_ops & 1 << 2) {
+			draw_triangle_vertices(
+				triangle.point[0].x, triangle.point[0].y, 
+				triangle.point[1].x, triangle.point[1].y,
+				triangle.point[2].x, triangle.point[2].y, 0xFFFF0000
 			);
 		}
 	

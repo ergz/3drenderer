@@ -68,6 +68,7 @@ void draw_grid(int grid_width)
 	}
 };
 
+// TODO(ergz): option to make the pixel "fatter"
 void draw_pixel(int x, int y, uint32_t color) 
 {
 	if (x >= 0 && x < WINDOW_WIDTH && y >= 0 && y < WINDOW_HEIGHT) {
@@ -136,3 +137,12 @@ void draw_triangle(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t colo
 	draw_line(x1, y1, x2, y2, color);
 	draw_line(x2, y2, x0, y0, color);
 };
+
+
+void draw_triangle_vertices(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color)
+{
+	draw_pixel(x0, y0, color);
+	draw_pixel(x1, y1, color);
+	draw_pixel(x2, y2, color);
+};
+
