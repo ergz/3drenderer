@@ -8,20 +8,27 @@
 #include "vector.h"
 #include "triangle.h"
 #include "array.h"
+#include "matrix.h"
+
 
 triangle_t *triangles_to_render = NULL; // struct of 3 vect2's (x, y)
 
+
 int previous_frame_time = 0;
 vec3_t camera_position = {0, 0, 0};
-vec3_t cube_rotation = {0, 0, 0};
 
 float fov_factor = 750;
 bool is_running = false;
 
-typedef unsigned char triangle_render_ops;
 // 8 bits to represent the render options of the triangle
-// 11111 1(vertices) 1(wireframe) 1(fill)
+typedef unsigned char triangle_render_ops;
+
 triangle_render_ops triangle_ops = ~0u;
+
+void triangle_option_toggle_bit(triangle_render_ops *tr, int n) 
+{
+	*tr ^= 1UL << n;
+}
 
 void triangle_option_toggle_fill(triangle_render_ops *tr) 
 {
@@ -40,7 +47,8 @@ void triangle_option_toggle_vertices(triangle_render_ops *tr)
 
 void setup(char *filename)
 {
-	
+	triangle_option_toggle_fill(&triangle_ops);
+
 	color_buffer = (uint32_t*)malloc(sizeof(uint32_t) * WINDOW_WIDTH * WINDOW_HEIGHT);
 	
 	color_buffer_texture = SDL_CreateTexture(
@@ -71,7 +79,7 @@ void process_input()
 				is_running = false;
 			} else if (event.key.keysym.sym == SDLK_1) {
 				// Pressing “1” displays the wireframe and a small red dot for each triangle vertex
-				triangle_option_toggle_wireframe(&triangle_ops);
+				triangle_option_toggle_bit(&triangle_ops, 1);
 			} else if (event.key.keysym.sym == SDLK_2) {
 				// Pressing “2” displays only the wireframe lines
 				triangle_option_toggle_fill(&triangle_ops);
@@ -111,10 +119,23 @@ void update(void)
 	previous_frame_time = SDL_GetTicks();
 	
 	triangles_to_render = NULL;
+	
+	//mesh.rotation.y += 0.01;
+	//mesh.rotation.x += 0.01;
+	//mesh.rotation.z += 0.01;
 
-	cube_rotation.y += 0.01;
-	cube_rotation.x += 0.01;
-	cube_rotation.z += 0.01;
+	mesh.scale.x += 0.002;
+	mesh.scale.y += 0.002;
+
+    //printf("the value of mesh scale: %.4f\n", mesh.scale.x);
+    
+	mat4_t scale_matrix = mat4_create_scale(
+		mesh.scale.x,
+		mesh.scale.y,
+		mesh.scale.z
+	);
+
+    // print_mat4(scale_matrix);
 
 	int num_faces = array_length(mesh.faces);
 
@@ -128,23 +149,23 @@ void update(void)
 
 		triangle_t projected_triangle;
 
-		vec3_t transformed_vertices[3]; // array of length three of vec3's
+		vec4_t transformed_vertices[3]; // array of length three of vec4's
 
 		// for each of the vertices in the triangle project
 		for (int j = 0; j < 3; j++) {
-			vec3_t transformed_vertex = mesh_face_vertices[j];
-			transformed_vertex = vec3_rotate_x(transformed_vertex, cube_rotation.x);
-			transformed_vertex = vec3_rotate_y(transformed_vertex, cube_rotation.y);
-			transformed_vertex = vec3_rotate_z(transformed_vertex, cube_rotation.z);
+			vec4_t transformed_vertex = vec3_to_vec4(mesh_face_vertices[j]);
+
+			// TODO(ergz): refactor this to use matrix
+			transformed_vertex = mat4_mult_vec4(scale_matrix, transformed_vertex);
 
 			transformed_vertex.z += 5; // TODO remove this hard-coded value
 			transformed_vertices[j] = transformed_vertex; 
 		}
 
 		// check back-face culling
-		vec3_t vector_a = transformed_vertices[0];
-		vec3_t vector_b = transformed_vertices[1];
-		vec3_t vector_c = transformed_vertices[2];
+		vec3_t vector_a = vec4_to_vec3(transformed_vertices[0]);
+		vec3_t vector_b = vec4_to_vec3(transformed_vertices[1]);
+		vec3_t vector_c = vec4_to_vec3(transformed_vertices[2]);
 
 		// find B-A and C-A
 		vec3_t vector_ab = vec3_sub(vector_b, vector_a);
@@ -168,7 +189,7 @@ void update(void)
 			// project to 2d
 			for (int j = 0; j < 3; j++) {
 
-				vec2_t projected_point = project(transformed_vertices[j]);
+				vec2_t projected_point = project(vec4_to_vec3(transformed_vertices[j]));
 				projected_point.x += (WINDOW_WIDTH / 2);
 				projected_point.y += (WINDOW_HEIGHT / 2);
 
@@ -179,6 +200,7 @@ void update(void)
 		}
 	}
 };
+
 
 void render()
 {

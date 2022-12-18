@@ -13,6 +13,14 @@ typedef struct {
 } vec3_t;
 
 typedef struct {
+	float x;
+	float y;
+	float z;
+	float w;
+} vec4_t;
+
+
+typedef struct {
 	vec3_t position;
 	vec3_t rotation;
 	float fov_angle;
@@ -42,5 +50,8 @@ vec3_t vec3_div(vec3_t, float);
 vec3_t vec3_cross_prod(vec3_t, vec3_t);
 void vec3_normalize(vec3_t*);
 float vec3_dot(vec3_t a, vec3_t b);
+
+vec4_t vec3_to_vec4(vec3_t);
+vec3_t vec4_to_vec3(vec4_t);
 
 #endif

@@ -2,7 +2,7 @@
 <N10X>
 	<Workspace>
 		<IncludeFilter>*.*,</IncludeFilter>
-		<ExcludeFilter>*.obj,*.lib,*.pch,*.dll,*.pdb,.vs,Debug,Release,x64,obj,*.user,Intermediate,</ExcludeFilter>
+		<ExcludeFilter>*.obj,*.lib,*.pch,*.dll,*.pdb,.vs,Debug,Release,x64,obj,*.user,Intermediate,.git,</ExcludeFilter>
 		<SyncFiles>true</SyncFiles>
 		<Recursive>true</Recursive>
 		<IsVirtual>false</IsVirtual>
@@ -12,10 +12,11 @@
 		<BuildFileCommand></BuildFileCommand>
 		<CleanCommand></CleanCommand>
 		<BuildWorkingDirectory></BuildWorkingDirectory>
-		<RunCommand></RunCommand>
+		<RunCommand>build\renderer.exe</RunCommand>
 		<DebugCommand></DebugCommand>
 		<ExePathCommand></ExePathCommand>
 		<DebugSln></DebugSln>
+		<UseVisualStudioEnvBat>true</UseVisualStudioEnvBat>
 		<Configurations>
 			<Configuration>Debug</Configuration>
 			<Configuration>Release</Configuration>
@@ -24,15 +25,14 @@
 			<Platform>x64</Platform>
 		</Platforms>
 		<AdditionalIncludePaths>
-			<AdditionalIncludePath>C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/include</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/ATLMFC/include</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/VS/include</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files (x86)/Windows Kits/10/include/10.0.19041.0/ucrt</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files (x86)/Windows Kits/10//include/10.0.19041.0//um</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files (x86)/Windows Kits/10//include/10.0.19041.0//shared</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files (x86)/Windows Kits/10//include/10.0.19041.0//winrt</AdditionalIncludePath>
-			<AdditionalIncludePath>C:/Program Files (x86)/Windows Kits/10//include/10.0.19041.0//cppwinrt</AdditionalIncludePath>
-			<AdditionalIncludePath>D:\dev\libraries\SDL2-devel-2.24.2-VC\SDL2-2.24.2\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\ATLMFC\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt</AdditionalIncludePath>
 		</AdditionalIncludePaths>
 		<Defines></Defines>
 		<ConfigProperties>

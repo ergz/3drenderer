@@ -8,6 +8,12 @@
 	"build_systems":
 	[
 		{
+			"name": "build.bat",
+			"shell_cmd": "build.bat", 
+			"selector": "source.c", 
+			"working_dir": "$project_path"
+		},
+		{
 			"name": "make - build",
 			"shell_cmd": "mingw32-make", 
 			"selector": "source.c", 

@@ -139,6 +139,8 @@ void draw_triangle(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t colo
 };
 
 
+// TODO(ergz): the points can barely be seen on the screen at the moment,
+// need to make them fatter so
 void draw_triangle_vertices(int x0, int y0, int x1, int y1, int x2, int y2, uint32_t color)
 {
 	draw_pixel(x0, y0, color);
