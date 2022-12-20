@@ -78,7 +78,7 @@ void process_input()
 			if (event.key.keysym.sym == SDLK_ESCAPE) {
 				is_running = false;
 			} else if (event.key.keysym.sym == SDLK_1) {
-				// Pressing “1” displays the wireframe and a small red dot for each triangle vertex
+				// Pressing "1" displays the wireframe and a small red dot for each triangle vertex
 				triangle_option_toggle_bit(&triangle_ops, 1);
 			} else if (event.key.keysym.sym == SDLK_2) {
 				// Pressing “2” displays only the wireframe lines
@@ -120,12 +120,14 @@ void update(void)
 	
 	triangles_to_render = NULL;
 	
-	//mesh.rotation.y += 0.01;
-	//mesh.rotation.x += 0.01;
-	//mesh.rotation.z += 0.01;
+	mesh.rotation.y += 0.03;
+	// mesh.rotation.x += 0.008;
+	// mesh.rotation.z += 0.008;
 
-	mesh.scale.x += 0.002;
-	mesh.scale.y += 0.002;
+	// mesh.scale.x += 0.002;
+	// mesh.scale.y += 0.002;
+	// mesh.translation.x += 0.01;
+	mesh.translation.z = 5;
 
     //printf("the value of mesh scale: %.4f\n", mesh.scale.x);
     
@@ -135,6 +137,23 @@ void update(void)
 		mesh.scale.z
 	);
 
+	mat4_t tranlate_matrix = mat4_create_translation(
+		mesh.translation.x,
+		mesh.translation.y,
+		mesh.translation.z	
+	);
+
+	mat4_t rotation_matrix_X = mat4_create_rotation_x(
+		mesh.rotation.x
+	);
+
+	mat4_t rotation_matrix_Y = mat4_create_rotation_y(
+		mesh.rotation.y
+	);
+
+	mat4_t rotation_matrix_Z = mat4_create_rotation_z(
+		mesh.rotation.z	
+	);
     // print_mat4(scale_matrix);
 
 	int num_faces = array_length(mesh.faces);
@@ -155,10 +174,12 @@ void update(void)
 		for (int j = 0; j < 3; j++) {
 			vec4_t transformed_vertex = vec3_to_vec4(mesh_face_vertices[j]);
 
-			// TODO(ergz): refactor this to use matrix
 			transformed_vertex = mat4_mult_vec4(scale_matrix, transformed_vertex);
+			transformed_vertex = mat4_mult_vec4(rotation_matrix_X, transformed_vertex);
+			transformed_vertex = mat4_mult_vec4(rotation_matrix_Y, transformed_vertex);
+			transformed_vertex = mat4_mult_vec4(rotation_matrix_Z, transformed_vertex);
+			transformed_vertex = mat4_mult_vec4(tranlate_matrix, transformed_vertex);
 
-			transformed_vertex.z += 5; // TODO remove this hard-coded value
 			transformed_vertices[j] = transformed_vertex; 
 		}
 
@@ -255,7 +276,7 @@ void free_resources(void)
 
 int main(int argc, char *argv[])
 {
-	
+
 	char *filename;
 	if (argc == 1) {
 		printf("using default file\n");
