@@ -14,9 +14,9 @@
 		{
 			"name": "build.bat",
 			"shell_cmd": "build.bat", 
-			"selector": "source.c", 
+			"selector": "source.c++", 
 			"working_dir": "$project_path", 
-			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$", 
 		}
 	]
 }

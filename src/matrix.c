@@ -4,17 +4,16 @@
 
 mat4_t mat4_identity(void) 
 {
-    mat4_t m = { {
+    mat4_t m = {{
         { 1, 0, 0, 0 },
         { 0, 1, 0, 0 },
         { 0, 0, 1, 0 },
         { 0, 0, 0, 1 }
-    } };
+    }};
 
 
 	return m;
 };
-
 
 mat4_t mat4_create_scale(float sx, float sy, float sz) 
 {
@@ -31,7 +30,7 @@ vec4_t mat4_mult_vec4(mat4_t mat, vec4_t vec)
 {
 	vec4_t result;
 
-	result.x = vec.x * mat.m[0][0] + vec.y * mat.m[0][1] + vec.z * mat.m[0][2] + vec.w * mat.m[0][3];
+    result.x = vec.x * mat.m[0][0] + vec.y * mat.m[0][1] + vec.z * mat.m[0][2] + vec.w * mat.m[0][3];
 	result.y = vec.x * mat.m[1][0] + vec.y * mat.m[1][1] + vec.z * mat.m[1][2] + vec.w * mat.m[1][3];
 	result.z = vec.x * mat.m[2][0] + vec.y * mat.m[2][1] + vec.z * mat.m[2][2] + vec.w * mat.m[2][3];
 	result.w = vec.x * mat.m[3][0] + vec.y * mat.m[3][1] + vec.z * mat.m[3][2] + vec.w * mat.m[3][3];
@@ -63,7 +62,6 @@ mat4_t mat4_create_translation(float tx, float ty, float tz)
 
     return result;
 }
-
 
 mat4_t mat4_create_rotation_z(float angle)
 {
@@ -108,4 +106,13 @@ mat4_t mat4_create_rotation_x(float angle)
     return(result);
 }
 
-
+mat4_t mat4_mult_mat4(mat4_t a, mat4_t b) 
+{   
+    mat4_t m;
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            m.m[i][j] = a.m[i][0]*b.m[0][j] + a.m[i][1]*b.m[1][j] + a.m[i][2]*b.m[2][j] + a.m[i][3]*b.m[3][j];
+        }
+    }
+    return(m);
+}

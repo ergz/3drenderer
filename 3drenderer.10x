@@ -2,17 +2,19 @@
 <N10X>
 	<Workspace>
 		<IncludeFilter>*.*,</IncludeFilter>
-		<ExcludeFilter>*.obj,*.lib,*.pch,*.dll,*.pdb,.vs,Debug,Release,x64,obj,*.user,Intermediate,.git,</ExcludeFilter>
+		<ExcludeFilter>*.obj,*.lib,*.pch,*.dll,*.pdb,.vs,Debug,Release,x64,obj,*.user,Intermediate,</ExcludeFilter>
 		<SyncFiles>true</SyncFiles>
 		<Recursive>true</Recursive>
+		<ShowEmptyFolders>true</ShowEmptyFolders>
 		<IsVirtual>false</IsVirtual>
 		<IsFolder>false</IsFolder>
-		<BuildCommand>build.bat</BuildCommand>
+		<BuildCommand>call build.bat</BuildCommand>
 		<RebuildCommand></RebuildCommand>
 		<BuildFileCommand></BuildFileCommand>
 		<CleanCommand></CleanCommand>
 		<BuildWorkingDirectory></BuildWorkingDirectory>
-		<RunCommand>build\renderer.exe</RunCommand>
+		<CancelBuild></CancelBuild>
+		<RunCommand>build/renderer.exe</RunCommand>
 		<DebugCommand></DebugCommand>
 		<ExePathCommand></ExePathCommand>
 		<DebugSln></DebugSln>
@@ -33,6 +35,7 @@
 			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared</AdditionalIncludePath>
 			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt</AdditionalIncludePath>
 			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt</AdditionalIncludePath>
+			<AdditionalIncludePath>D:\dev\libraries\SDL2-devel-2.24.2-VC\SDL2-2.24.2\include</AdditionalIncludePath>
 		</AdditionalIncludePaths>
 		<Defines></Defines>
 		<ConfigProperties>

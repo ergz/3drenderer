@@ -17,6 +17,7 @@ mat4_t mat4_create_rotation_z(float x);
 
 
 vec4_t mat4_mult_vec4(mat4_t m, vec4_t v);
+mat4_t mat4_mult_mat4(mat4_t a, mat4_t b);
 
 // utils
 
