@@ -1,0 +1,457 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"WINDOW",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"rota",
+				"rotation_matrix_X"
+			],
+			[
+				"mat",
+				"mat4_create_translation"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"build.bat",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"build.bat",
+				""
+			]
+		],
+		[
+			[
+				[
+					"build.bat",
+					""
+				],
+				[
+					"make - build",
+					""
+				],
+				[
+					"make - clean",
+					""
+				],
+				[
+					"make - run",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"build.bat",
+				""
+			]
+		],
+		[
+			[
+				[
+					"make - build",
+					""
+				],
+				[
+					"make - clean",
+					""
+				],
+				[
+					"make - run",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"make - build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"select color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"edit curre",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"edit",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"set syntax c++",
+				"Set Syntax: C++11"
+			],
+			[
+				"edit ",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"edit c",
+				"PackageDev: Edit Current Color Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings"
+			],
+			[
+				"edit color",
+				"PackageDev: Edit Current Color Scheme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/dev/tutorials/sdl-basic-window"
+	],
+	"file_history":
+	[
+		"/D/dev/3d-graphics/3drenderer/src/mesh.c",
+		"/D/dev/3d-graphics/3drenderer/3drenderer.sublime-project",
+		"/D/dev/3d-graphics/3drenderer/src/matrix.c",
+		"/D/dev/3d-graphics/3drenderer/src/matrix.h",
+		"/D/dev/3d-graphics/3drenderer/src/display.c",
+		"/D/dev/3d-graphics/3drenderer/src/display.h",
+		"/D/dev/libraries/SDL2-devel-2.24.2-VC/SDL2-2.24.2/include/SDL_render.h",
+		"/D/dev/3d-graphics/3drenderer/src/main.c",
+		"/D/dev/libraries/SDL2-devel-2.24.2-VC/SDL2-2.24.2/include/SDL_events.h",
+		"/D/dev/3d-graphics/3drenderer/src/array.c",
+		"/D/dev/3d-graphics/3drenderer/src/array.h",
+		"/C/Users/emanuel/AppData/Roaming/Sublime Text/Packages/User/c-better.sublime-syntax",
+		"/D/dev/3d-graphics/3drenderer/src/vector.c",
+		"/D/dev/3d-graphics/3drenderer/src/vector.h",
+		"/D/dev/3d-graphics/3drenderer/build.bat",
+		"/D/dev/3d-graphics/3drenderer/src/mesh.h",
+		"/D/dev/3d-graphics/3drenderer/src/triangle.h",
+		"/D/dev/libraries/SDL2-devel-2.24.2-VC/SDL2-2.24.2/include/SDL.h",
+		"/D/dev/libraries/SDL2-devel-2.24.2-VC/SDL2-2.24.2/include/SDL_video.h",
+		"/D/dev/libraries/SDL2-devel-2.24.2-VC/SDL2-2.24.2/include/SDL_timer.h",
+		"/D/dev/3d-graphics/3drenderer/Makefile",
+		"/C/Users/emanuel/Downloads/SDL2-devel-2.24.0-VC/SDL2-2.24.0/docs/README-windows.md",
+		"/C/Users/emanuel/Downloads/SDL2-devel-2.24.0-VC/SDL2-2.24.0/docs/README.md"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 347.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "subl-proj.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mes",
+				"3drenderer\\src\\mesh.c"
+			],
+			[
+				"mesh",
+				"3drenderer\\src\\mesh.c"
+			],
+			[
+				"main",
+				"3drenderer\\src\\main.c"
+			],
+			[
+				"displa",
+				"3drenderer\\src\\display.c"
+			],
+			[
+				"dspla",
+				"3drenderer\\src\\display.c"
+			],
+			[
+				"project",
+				"3drenderer\\3drenderer.sublime-project"
+			],
+			[
+				"matrix",
+				"3drenderer\\src\\matrix.c"
+			],
+			[
+				"man",
+				"3drenderer\\src\\main.c"
+			],
+			[
+				"proj",
+				"3drenderer\\3drenderer.sublime-project"
+			],
+			[
+				"arra",
+				"3drenderer\\src\\array.h"
+			],
+			[
+				"mesh.",
+				"3drenderer\\src\\mesh.h"
+			],
+			[
+				"matrix.h",
+				"3drenderer\\src\\matrix.h"
+			],
+			[
+				"bui",
+				"3drenderer\\build.bat"
+			],
+			[
+				"vec",
+				"3drenderer\\src\\vector.c"
+			],
+			[
+				"build",
+				"3drenderer\\build.bat"
+			],
+			[
+				"mai",
+				"3drenderer\\src\\main.c"
+			],
+			[
+				"matr",
+				"3drenderer\\src\\matrix.h"
+			],
+			[
+				"display",
+				"3drenderer\\src\\display.h"
+			],
+			[
+				"make",
+				"Makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 323.0,
+		"last_filter": "update",
+		"selected_items":
+		[
+			[
+				"update",
+				"update"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

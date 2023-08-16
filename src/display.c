@@ -10,8 +10,8 @@ SDL_Renderer *renderer = NULL;
 uint32_t *color_buffer = NULL;
 SDL_Texture *color_buffer_texture = NULL;
 
-int WINDOW_WIDTH;
-int WINDOW_HEIGHT;
+int window_width;
+int window_height;
 
 bool initialize_window(void)
 {
@@ -22,15 +22,15 @@ bool initialize_window(void)
 
 	SDL_DisplayMode display_mode;
 	SDL_GetCurrentDisplayMode(0, &display_mode);
-	WINDOW_WIDTH = display_mode.w * .75;
-	WINDOW_HEIGHT = display_mode.h * .75;
+	window_width = display_mode.w * .75;
+	window_height = display_mode.h * .75;
 
 	/* create an sdl window */
 	window = SDL_CreateWindow(
 		NULL, 
 		SDL_WINDOWPOS_CENTERED, 
 		SDL_WINDOWPOS_CENTERED, 
-		WINDOW_WIDTH, WINDOW_HEIGHT, 
+		window_width, window_height, 
 		SDL_WINDOW_RESIZABLE
 	);
 
@@ -62,9 +62,9 @@ void destroy_window(void)
 
 void draw_grid(int grid_width) 
 {
-	for (int y = 0; y < WINDOW_HEIGHT; y+=grid_width) {
-		for (int x = 0; x < WINDOW_WIDTH; x+=grid_width) {
-				color_buffer[(WINDOW_WIDTH * y) + x] = 0xFFFFFFFF;
+	for (int y = 0; y < window_height; y+=grid_width) {
+		for (int x = 0; x < window_width; x+=grid_width) {
+				color_buffer[(window_width * y) + x] = 0xFFFFFFFF;
 		}
 	}
 };
@@ -72,8 +72,8 @@ void draw_grid(int grid_width)
 // TODO(ergz): option to make the pixel "fatter"
 void draw_pixel(int x, int y, uint32_t color) 
 {
-	if (x >= 0 && x < WINDOW_WIDTH && y >= 0 && y < WINDOW_HEIGHT) {
-		color_buffer[(WINDOW_WIDTH * y) + x] = color;
+	if (x >= 0 && x < window_width && y >= 0 && y < window_height) {
+		color_buffer[(window_width * y) + x] = color;
 	}
 };
 
@@ -91,9 +91,9 @@ void draw_rect(int x, int y, int width, int height, uint32_t color)
 
 void clear_color_buffer(uint32_t color) 
 {
-	for (int y = 0; y < WINDOW_HEIGHT; y++) {
-		for (int x = 0; x < WINDOW_WIDTH; x++) {
-			color_buffer[(WINDOW_WIDTH * y) + x] = color;
+	for (int y = 0; y < window_height; y++) {
+		for (int x = 0; x < window_width; x++) {
+			color_buffer[(window_width * y) + x] = color;
 		}
 	}
 };
@@ -104,12 +104,13 @@ void render_color_buffer(void)
 		color_buffer_texture, 
 		NULL, 
 		color_buffer, 
-		(int)WINDOW_WIDTH * sizeof(uint32_t));
+		(int)window_width * sizeof(uint32_t));
 
 	SDL_RenderCopy(renderer, color_buffer_texture, NULL, NULL);
 
 };
 
+//fdsafdsa
 void draw_line(int x0, int y0, int x1, int y1, uint32_t color) 
 {
 	int delta_x = (x1 - x0);

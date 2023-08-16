@@ -12,8 +12,8 @@ extern uint32_t *color_buffer;
 extern SDL_Window *window;
 extern SDL_Renderer *renderer;
 extern SDL_Texture *color_buffer_texture;
-extern int WINDOW_WIDTH;
-extern int WINDOW_HEIGHT;
+extern int window_width;
+extern int window_height;
 
 bool initialize_window(void);
 void destroy_window(void);
